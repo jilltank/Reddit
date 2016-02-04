@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   resources :comments
   resources :posts
-  get 'welcome/index'
 
-  get 'welcome/about'
+  root 'welcome#index'
 
-  get 'welcome/contact'
+  get 'about' => 'welcome#about'
 
-  get 'welcome/help'
+  get 'contact' => 'welcome#contact'
+
+  get 'help' => 'welcome#help'
+
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
