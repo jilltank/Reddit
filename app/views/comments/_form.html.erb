@@ -11,19 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_field :content %>
-  </div>
-  <div class="field">
-    <%= f.label :author %><br>
-    <%= f.text_field :author %>
-  </div>
-  <div class="field">
-    <%= f.label :comment_id %><br>
-    <%= f.number_field :comment_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+  <form role="form">
+
+    <div class="form-group">
+      <%= f.hidden_field :user_id, value: current_user.id %>
+    </div>
+
+  <form role="form">
+    <div class="form-group">
+      <%= f.text_area :content, placeholder: "Put your awesome comment here...", class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</form>

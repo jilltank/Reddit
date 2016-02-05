@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :comments
   resources :posts
 
@@ -10,8 +11,6 @@ Rails.application.routes.draw do
 
   get 'help' => 'welcome#help'
 
-
-  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
