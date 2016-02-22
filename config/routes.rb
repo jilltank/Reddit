@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :add_name_to_users
   devise_for :users
   resources :comments
   resources :posts
